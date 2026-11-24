@@ -1,0 +1,8 @@
+{
+  "appId": "com.pinkboutique.app",
+  "appName": "Pink Boutique",
+  "webDir": "www",
+  "server": {
+    "androidScheme": "https"
+  }
+}
