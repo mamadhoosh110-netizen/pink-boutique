@@ -3,64 +3,113 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>پینک بوتیک | فروشگاه پوشاک زنانه</title>
-  <meta name="description" content="پینک بوتیک؛ انتخابی شیک برای استایل روزمره و مهمانی">
+  <title>Pink Maryam | بوتیک زنانه</title>
+  <meta name="description" content="Pink Maryam؛ بوتیک آنلاین لباس و اکسسوری زنانه">
+  <meta name="theme-color" content="#f6b8d2">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600;700&family=Vazirmatn:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <style>
-    :root{--pink:#d95f91;--deep:#7b3154;--soft:#fff1f6;--ink:#30242a;--muted:#887781;--line:#f0dce5}
-    *{box-sizing:border-box}body{margin:0;font-family:Tahoma,Arial,sans-serif;background:#fffafc;color:var(--ink)}
-    a{color:inherit;text-decoration:none}button,input{font:inherit}.top{background:var(--deep);color:#fff;text-align:center;padding:9px 14px;font-size:12px}
-    header{background:#fff;position:sticky;top:0;z-index:5;border-bottom:1px solid var(--line)}.head{max-width:1160px;margin:auto;padding:17px 22px;display:flex;align-items:center;gap:22px}
-    .brand{font-size:25px;font-weight:900;color:var(--deep);white-space:nowrap}.brand span{color:var(--pink)}nav{display:flex;gap:20px;flex:1;font-size:14px}nav a:hover{color:var(--pink)}
-    .search{max-width:250px;width:100%;border:1px solid var(--line);border-radius:30px;padding:11px 15px;background:#fff8fb;outline-color:var(--pink)}
-    .iconbtn{border:0;background:var(--soft);color:var(--deep);border-radius:50%;width:42px;height:42px;cursor:pointer}
-    main{max-width:1160px;margin:auto;padding:26px 22px}.hero{background:linear-gradient(120deg,#f7c6d9,#fff0f6 60%,#f9dce7);border-radius:28px;min-height:340px;display:flex;align-items:center;padding:clamp(25px,6vw,70px);overflow:hidden;position:relative}
-    .hero:after{content:"✿";position:absolute;left:8%;top:5%;font-size:230px;color:#fff7;transform:rotate(-18deg)}.hero-copy{position:relative;z-index:1;max-width:480px}
-    .eyebrow{color:var(--deep);font-size:13px;font-weight:bold;letter-spacing:1px}.hero h1{font-size:clamp(30px,4vw,49px);line-height:1.5;margin:14px 0}.hero p{line-height:2;color:#6e4a5b}
-    .cta{display:inline-block;background:var(--deep);color:white;padding:13px 25px;border-radius:30px;margin-top:8px;font-size:14px}
-    .sectionhead{display:flex;align-items:end;justify-content:space-between;gap:15px;margin:42px 0 18px}.sectionhead h2{margin:0;font-size:23px}.sectionhead p{margin:7px 0 0;color:var(--muted);font-size:13px}
-    .cats{display:grid;grid-template-columns:repeat(5,1fr);gap:13px}.cat{background:white;border:1px solid var(--line);border-radius:18px;padding:22px 12px;text-align:center;font-size:14px;transition:.2s}.cat:hover{transform:translateY(-3px);border-color:#e9a8c4}.cat .emoji{display:block;font-size:30px;margin-bottom:12px}
-    .filters{display:flex;gap:9px;flex-wrap:wrap;margin-bottom:18px}.filter{border:1px solid var(--line);background:white;border-radius:22px;padding:9px 16px;color:#765866;cursor:pointer}.filter.active,.filter:hover{background:var(--deep);color:#fff}
-    .products{display:grid;grid-template-columns:repeat(4,1fr);gap:17px}.product{background:white;border:1px solid var(--line);border-radius:20px;overflow:hidden}.visual{height:235px;position:relative;overflow:hidden;background:#f8e4ed}.visual img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .45s}.product:hover .visual img{transform:scale(1.05)}.visual.alt{background:#f8eee7}.visual.blue{background:#e4eaf4}.visual.gold{background:#f8edcf}
-    .tag{position:absolute;top:12px;right:12px;background:#fff;border-radius:20px;padding:6px 10px;font-size:11px;color:var(--deep)}.details{padding:15px}.details h3{font-size:14px;margin:0 0 10px}.price{font-weight:bold;color:var(--deep)}.old{color:#b9a7b0;text-decoration:line-through;font-size:12px;margin-right:7px}.add{float:left;border:0;border-radius:50%;width:34px;height:34px;background:var(--soft);color:var(--deep);font-size:20px;cursor:pointer}
-    .note{margin:44px 0;background:#fff0f6;border-radius:22px;padding:26px;text-align:center;color:var(--deep);line-height:2}.note strong{font-size:20px}footer{border-top:1px solid var(--line);padding:28px 22px;text-align:center;color:var(--muted);font-size:12px}
-    .toast{position:fixed;bottom:20px;left:20px;background:var(--deep);color:white;padding:13px 18px;border-radius:12px;display:none;z-index:10}
-    @media(max-width:800px){.head{flex-wrap:wrap;gap:12px}.brand{flex:1}nav{order:3;width:100%;overflow:auto;gap:16px}.search{max-width:none;flex:1}.cats{grid-template-columns:repeat(3,1fr)}.products{grid-template-columns:repeat(2,1fr)}.visual{height:190px}}
-    @media(max-width:460px){main{padding:18px 13px}.head{padding:13px}.hero{min-height:300px;border-radius:20px}.hero:after{font-size:140px;left:-5%}.cats{grid-template-columns:repeat(2,1fr)}.products{gap:10px}.visual{height:155px;font-size:54px}.details{padding:12px}.sectionhead h2{font-size:19px}}
+    :root{--pink:#e64b91;--deep:#8b315e;--soft:#fff0f7;--ink:#33242c;--muted:#8d7882;--line:#f1d8e4;--white:#fff}
+    *{box-sizing:border-box}body{margin:0;font-family:Vazirmatn,Tahoma,sans-serif;background:#fffafd;color:var(--ink)}
+    a{color:inherit;text-decoration:none}button,input{font:inherit}button{cursor:pointer}
+    .top{background:var(--deep);color:#fff;text-align:center;padding:9px 14px;font-size:12px}
+    header{background:#fff;position:sticky;top:0;z-index:5;border-bottom:1px solid var(--line)}.head{max-width:1160px;margin:auto;padding:13px 22px;display:flex;align-items:center;gap:16px}
+    .brand{display:flex;align-items:center;gap:9px;white-space:nowrap;color:var(--deep)}.brand-mark{width:43px;height:43px;display:block}.brand-name{font-family:"Dancing Script",cursive;font-size:28px;font-weight:700;direction:ltr}.brand-name small{font-family:Vazirmatn,sans-serif;font-size:11px;display:block;text-align:right;font-weight:600;letter-spacing:1px}
+    nav{display:flex;gap:18px;flex:1;font-size:13px}nav a:hover{color:var(--pink)}.search{max-width:230px;width:100%;border:1px solid var(--line);border-radius:30px;padding:10px 14px;background:#fff8fb;outline-color:var(--pink)}
+    .head-actions{display:flex;gap:8px;align-items:center}.pill{border:1px solid var(--line);background:#fff;color:var(--deep);border-radius:24px;padding:10px 14px;font-size:12px}.pill.primary{background:var(--deep);color:#fff;border-color:var(--deep)}.cart-button{border:0;background:var(--soft);color:var(--deep);border-radius:24px;padding:10px 13px;font-size:13px}
+    main{max-width:1160px;margin:auto;padding:25px 22px}.hero{background:linear-gradient(120deg,#f7c6d9,#fff0f6 60%,#f9dce7);border-radius:28px;min-height:330px;display:flex;align-items:center;padding:clamp(25px,6vw,70px);overflow:hidden;position:relative}
+    .hero:after{content:"✿";position:absolute;left:8%;top:5%;font-size:230px;color:#fff7;transform:rotate(-18deg)}.hero-copy{position:relative;z-index:1;max-width:500px}.eyebrow{color:var(--deep);font-size:13px;font-weight:700;letter-spacing:.5px}
+    .hero h1{font-size:clamp(30px,4vw,48px);line-height:1.55;margin:13px 0}.hero p{line-height:2;color:#6e4a5b}.cta{display:inline-block;background:var(--deep);color:white;padding:13px 25px;border-radius:30px;margin-top:8px;font-size:14px}
+    .sectionhead{display:flex;align-items:end;justify-content:space-between;gap:15px;margin:40px 0 17px}.sectionhead h2{margin:0;font-size:23px}.sectionhead p{margin:7px 0 0;color:var(--muted);font-size:13px}
+    .cats{display:grid;grid-template-columns:repeat(5,1fr);gap:13px}.cat{background:white;border:1px solid var(--line);border-radius:18px;padding:20px 12px;text-align:center;font-size:14px;transition:.2s}.cat:hover{transform:translateY(-3px);border-color:#e9a8c4}.cat .emoji{display:block;font-size:30px;margin-bottom:10px}
+    .filters{display:flex;gap:9px;flex-wrap:wrap;margin-bottom:18px}.filter{border:1px solid var(--line);background:white;border-radius:22px;padding:9px 16px;color:#765866}.filter.active,.filter:hover{background:var(--deep);color:#fff}
+    .products{display:grid;grid-template-columns:repeat(4,1fr);gap:17px}.product{background:white;border:1px solid var(--line);border-radius:20px;overflow:hidden}.visual{height:235px;position:relative;overflow:hidden;background:#f8e4ed}.visual img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .45s}.product:hover .visual img{transform:scale(1.05)}
+    .tag{position:absolute;top:12px;right:12px;background:#fff;border-radius:20px;padding:6px 10px;font-size:11px;color:var(--deep)}.details{padding:15px}.details h3{font-size:14px;margin:0 0 10px}.price{font-weight:800;color:var(--deep)}.old{color:#b9a7b0;text-decoration:line-through;font-size:12px;margin-right:7px}.add{float:left;border:0;border-radius:50%;width:35px;height:35px;background:var(--soft);color:var(--deep);font-size:22px}
+    .note{margin:42px 0;background:#fff0f6;border-radius:22px;padding:25px;text-align:center;color:var(--deep);line-height:2}.note strong{font-size:20px}footer{border-top:1px solid var(--line);padding:25px 22px;text-align:center;color:var(--muted);font-size:12px}
+    .toast{position:fixed;bottom:20px;left:20px;background:var(--deep);color:white;padding:13px 18px;border-radius:12px;display:none;z-index:30}
+    .overlay{position:fixed;inset:0;background:#2c1425a8;display:none;align-items:center;justify-content:center;padding:16px;z-index:20}.overlay.open{display:flex}.modal{width:min(100%,470px);max-height:90vh;overflow:auto;background:#fffafd;border-radius:25px;padding:24px;box-shadow:0 20px 80px #43142d44;position:relative}.modal h2{margin:0 0 8px;color:var(--deep);font-size:23px}.modal .sub{color:var(--muted);font-size:13px;line-height:1.9;margin:0 0 18px}.close{position:absolute;left:15px;top:15px;border:0;background:var(--soft);color:var(--deep);border-radius:50%;width:34px;height:34px;font-size:20px}
+    .tabs{display:flex;background:#fce5ef;padding:4px;border-radius:24px;margin-bottom:16px}.tabs button{flex:1;border:0;background:transparent;border-radius:20px;padding:10px;color:var(--deep)}.tabs button.active{background:#fff;box-shadow:0 2px 8px #8b315e12}
+    .field{display:block;width:100%;border:1px solid var(--line);background:white;border-radius:13px;padding:12px 14px;margin:10px 0;outline-color:var(--pink)}.action{width:100%;border:0;background:var(--deep);color:#fff;border-radius:25px;padding:13px;margin-top:8px;font-weight:700}.hint{font-size:11px;color:var(--muted);line-height:1.8;margin-top:12px}
+    .cart-row{display:flex;justify-content:space-between;align-items:center;gap:10px;border-bottom:1px solid var(--line);padding:12px 0;font-size:13px}.qty{display:flex;align-items:center;gap:9px}.qty button{border:0;background:var(--soft);color:var(--deep);border-radius:50%;width:27px;height:27px}.cart-total{display:flex;justify-content:space-between;font-weight:800;color:var(--deep);padding:17px 0}
+    .empty{text-align:center;padding:25px;color:var(--muted)}.manager-link{display:inline-block;margin-top:14px;color:var(--deep);font-size:12px;text-decoration:underline}
+    @media(max-width:900px){.head{flex-wrap:wrap;gap:11px}.brand{flex:1}nav{order:4;width:100%;overflow:auto;gap:15px}.search{max-width:none;flex:1}.head-actions{order:3}.products{grid-template-columns:repeat(3,1fr)}}
+    @media(max-width:650px){main{padding:18px 13px}.head{padding:12px}.brand-name{font-size:25px}.hero{min-height:300px;border-radius:20px}.hero:after{font-size:140px;left:-5%}.cats{grid-template-columns:repeat(3,1fr)}.products{grid-template-columns:repeat(2,1fr);gap:10px}.visual{height:175px}.details{padding:12px}.sectionhead h2{font-size:19px}.head-actions .manager-pill{display:none}}
+    @media(max-width:420px){.search{order:3;flex-basis:100%}.head-actions{order:2}.cats{grid-template-columns:repeat(2,1fr)}.visual{height:150px}.pill{padding:9px 11px}}
   </style>
 </head>
 <body>
-  <div class="top">ارسال رایگان برای خریدهای بالای ۲ میلیون تومان</div>
+  <div class="top">به دنیای صورتی Pink Maryam خوش آمدی ✨</div>
   <header><div class="head">
-    <a class="brand" href="#">پینک<span>بوتیک</span></a>
+    <a class="brand" href="#" aria-label="Pink Maryam">
+      <svg class="brand-mark" viewBox="0 0 64 64" role="img" aria-label="نشان Pink Maryam">
+        <defs><linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#f8a9cc"/><stop offset="1" stop-color="#ffe8f2"/></linearGradient></defs>
+        <circle cx="32" cy="32" r="31" fill="url(#bg)" stroke="#e9a0c0"/>
+        <path d="M12 24 Q29 6 52 21 L47 27 Q29 19 16 30Z" fill="#35212d"/><path d="M17 25 Q30 18 47 24 Q43 33 32 35 Q21 33 17 25Z" fill="#fff1f7" stroke="#8b315e" stroke-width="1.5"/>
+        <path d="M22 30 Q18 40 26 49 Q31 54 38 47 Q43 42 40 32 Q31 36 22 30Z" fill="#f3c1d6" stroke="#8b315e" stroke-width="1.5"/>
+        <path d="M29 40 Q35 44 40 39" fill="none" stroke="#8b315e" stroke-width="1.5" stroke-linecap="round"/><path d="M24 33 Q30 36 36 33" fill="none" stroke="#35212d" stroke-width="1.5" stroke-linecap="round"/>
+        <path d="M15 22 Q30 4 51 20" fill="none" stroke="#fff" stroke-width="2.5" stroke-linecap="round"/><path d="M45 47 l3 5 5 3-5 3-3 5-3-5-5-3 5-3Z" fill="#fff" opacity=".9"/>
+      </svg>
+      <span class="brand-name">Pink Maryam<small>BOUTIQUE</small></span>
+    </a>
     <nav><a href="#categories">دسته‌بندی‌ها</a><a href="#products">محصولات</a><a href="#about">درباره ما</a></nav>
     <input class="search" id="search" placeholder="جست‌وجوی محصول..." aria-label="جست‌وجوی محصول">
-    <button class="iconbtn" aria-label="سبد خرید" onclick="showCart()">🛍 <span id="count">0</span></button>
+    <div class="head-actions"><button class="pill" onclick="openAuth('login')">ورود مشتری</button><button class="pill manager-pill" onclick="openManager()">ورود مدیر</button><button class="cart-button" onclick="openCart()">🛍 سبد <b id="count">۰</b></button></div>
   </div></header>
   <main>
-    <section class="hero"><div class="hero-copy"><div class="eyebrow">کالکشن جدید · بهار و تابستان</div><h1>استایل تو،<br>امضای توست.</h1><p>انتخاب‌هایی لطیف و خاص برای روزهایی که می‌خواهی خودت باشی؛ با تازه‌ترین مدل‌های پینک بوتیک.</p><a class="cta" href="#products">دیدن محصولات</a></div></section>
-    <section id="categories"><div class="sectionhead"><div><h2>دسته‌بندی‌ها</h2><p>استایل مورد علاقه‌ات را پیدا کن</p></div></div>
+    <section class="hero"><div class="hero-copy"><div class="eyebrow">کالکشن جدید · انتخاب‌های خاص تو</div><h1>استایل تو،<br>امضای توست.</h1><p>لباس‌ها و اکسسوری‌های محبوبت را با خیال راحت ببین و انتخاب کن؛ برای مرور محصولات نیازی به ثبت‌نام نیست.</p><a class="cta" href="#products">دیدن محصولات</a></div></section>
+    <section id="categories"><div class="sectionhead"><div><h2>دسته‌بندی‌ها</h2><p>از اینجا استایل مورد علاقه‌ات را پیدا کن</p></div></div>
       <div class="cats"><a class="cat" href="#products" data-filter="مانتو"><span class="emoji">🧥</span>مانتو</a><a class="cat" href="#products" data-filter="شومیز"><span class="emoji">👚</span>شومیز</a><a class="cat" href="#products" data-filter="لباس مجلسی"><span class="emoji">👗</span>لباس مجلسی</a><a class="cat" href="#products" data-filter="شلوار"><span class="emoji">👖</span>شلوار</a><a class="cat" href="#products" data-filter="کیف"><span class="emoji">👜</span>کیف</a></div>
     </section>
-    <section id="products"><div class="sectionhead"><div><h2>تازه‌رسیده‌ها</h2><p>مدل‌های جدید برای کمد تو</p></div><a href="#products" style="color:var(--pink);font-size:13px">مشاهده همه ←</a></div>
+    <section id="products"><div class="sectionhead"><div><h2>تازه‌رسیده‌ها</h2><p>محصولات را ببین و به سبدت اضافه کن</p></div><a href="#products" style="color:var(--pink);font-size:13px">مشاهده همه ←</a></div>
       <div class="filters"><button class="filter active" data-filter="همه">همه</button><button class="filter" data-filter="مانتو">مانتو</button><button class="filter" data-filter="شومیز">شومیز</button><button class="filter" data-filter="لباس مجلسی">لباس مجلسی</button><button class="filter" data-filter="شلوار">شلوار</button><button class="filter" data-filter="کیف">کیف</button></div>
       <div class="products" id="productGrid">
-        <article class="product" data-category="مانتو" data-name="مانتو لینن بهاره"><div class="visual"><span class="tag">جدید</span><img src="https://images.unsplash.com/photo-1594633312681-425c7b97ccd1?auto=format&amp;fit=crop&amp;w=700&amp;q=85" alt="مانتو لینن بهاره"></div><div class="details"><h3>مانتو لینن بهاره</h3><span class="price">۱,۲۸۰,۰۰۰ تومان</span><button class="add" onclick="addCart('مانتو لینن بهاره')">+</button></div></article>
-        <article class="product" data-category="شومیز" data-name="شومیز یقه‌دار صورتی"><div class="visual alt"><span class="tag">پرفروش</span><img src="https://images.unsplash.com/photo-1483985988355-763728e1935b?auto=format&amp;fit=crop&amp;w=700&amp;q=85" alt="شومیز یقه‌دار صورتی"></div><div class="details"><h3>شومیز یقه‌دار صورتی</h3><span class="price">۷۹۰,۰۰۰ تومان</span><button class="add" onclick="addCart('شومیز یقه‌دار صورتی')">+</button></div></article>
-        <article class="product" data-category="لباس مجلسی" data-name="پیراهن مجلسی رز"><div class="visual blue"><span class="tag">ویژه</span><img src="https://images.unsplash.com/photo-1539109136881-3be0616acb4b?auto=format&amp;fit=crop&amp;w=700&amp;q=85" alt="پیراهن مجلسی رز"></div><div class="details"><h3>پیراهن مجلسی رز</h3><span class="price">۲,۴۵۰,۰۰۰ تومان</span><button class="add" onclick="addCart('پیراهن مجلسی رز')">+</button></div></article>
-        <article class="product" data-category="کیف" data-name="کیف دستی مینی"><div class="visual gold"><img src="https://images.unsplash.com/photo-1584917865442-de89df76afd3?auto=format&amp;fit=crop&amp;w=700&amp;q=85" alt="کیف دستی مینی"></div><div class="details"><h3>کیف دستی مینی</h3><span class="price">۹۸۰,۰۰۰ تومان</span><button class="add" onclick="addCart('کیف دستی مینی')">+</button></div></article>
+        <article class="product" data-category="مانتو" data-name="مانتو لینن بهاره" data-price="1280000"><div class="visual"><span class="tag">جدید</span><img src="https://images.unsplash.com/photo-1594633312681-425c7b97ccd1?auto=format&amp;fit=crop&amp;w=700&amp;q=85" alt="مانتو لینن بهاره"></div><div class="details"><h3>مانتو لینن بهاره</h3><span class="price">۱,۲۸۰,۰۰۰ تومان</span><button class="add" onclick="addCart(this)" aria-label="افزودن مانتو به سبد">+</button></div></article>
+        <article class="product" data-category="شومیز" data-name="شومیز یقه‌دار صورتی" data-price="790000"><div class="visual"><span class="tag">پرفروش</span><img src="https://images.unsplash.com/photo-1483985988355-763728e1935b?auto=format&amp;fit=crop&amp;w=700&amp;q=85" alt="شومیز یقه‌دار صورتی"></div><div class="details"><h3>شومیز یقه‌دار صورتی</h3><span class="price">۷۹۰,۰۰۰ تومان</span><button class="add" onclick="addCart(this)" aria-label="افزودن شومیز به سبد">+</button></div></article>
+        <article class="product" data-category="لباس مجلسی" data-name="پیراهن مجلسی رز" data-price="2450000"><div class="visual"><span class="tag">ویژه</span><img src="https://images.unsplash.com/photo-1539109136881-3be0616acb4b?auto=format&amp;fit=crop&amp;w=700&amp;q=85" alt="پیراهن مجلسی رز"></div><div class="details"><h3>پیراهن مجلسی رز</h3><span class="price">۲,۴۵۰,۰۰۰ تومان</span><button class="add" onclick="addCart(this)" aria-label="افزودن پیراهن به سبد">+</button></div></article>
+        <article class="product" data-category="کیف" data-name="کیف دستی مینی" data-price="980000"><div class="visual"><img src="https://images.unsplash.com/photo-1584917865442-de89df76afd3?auto=format&amp;fit=crop&amp;w=700&amp;q=85" alt="کیف دستی مینی"></div><div class="details"><h3>کیف دستی مینی</h3><span class="price">۹۸۰,۰۰۰ تومان</span><button class="add" onclick="addCart(this)" aria-label="افزودن کیف به سبد">+</button></div></article>
       </div>
     </section>
-    <section class="note" id="about"><strong>جزئیاتی که فرق می‌سازند</strong><br>پینک بوتیک؛ برای انتخاب‌های ساده، شیک و ماندگار.</section>
+    <section class="note" id="about"><strong>جزئیاتی که فرق می‌سازند</strong><br>Pink Maryam؛ برای انتخاب‌های ساده، شیک و ماندگار.</section>
   </main>
-  <footer>© پینک بوتیک · فروشگاه پوشاک زنانه</footer><div class="toast" id="toast"></div>
+  <footer>© Pink Maryam · بوتیک آنلاین پوشاک زنانه <br><button class="manager-link" onclick="openManager()">ورود مدیر فروشگاه</button></footer>
+  <div class="toast" id="toast" role="status"></div>
+
+  <div class="overlay" id="authOverlay" onclick="backdropClose(event,'authOverlay')"><section class="modal" role="dialog" aria-modal="true" aria-labelledby="authTitle"><button class="close" onclick="closeModal('authOverlay')" aria-label="بستن">×</button><h2 id="authTitle">به Pink Maryam خوش آمدی</h2><p class="sub">برای دیدن محصولات ثبت‌نام لازم نیست؛ برای ادامهٔ خرید وارد شو یا حساب بساز.</p>
+    <div class="tabs"><button id="loginTab" class="active" onclick="setAuthMode('login')">ورود</button><button id="signupTab" onclick="setAuthMode('signup')">ثبت‌نام</button></div>
+    <form id="authForm" onsubmit="submitAuth(event)"><div id="nameField" hidden><input class="field" id="customerName" autocomplete="name" placeholder="نام و نام خانوادگی"></div><input class="field" id="customerPhone" type="tel" autocomplete="tel" placeholder="شماره موبایل" required><input class="field" id="customerPassword" type="password" autocomplete="current-password" placeholder="رمز عبور" required><button class="action" id="authSubmit" type="submit">ورود</button></form>
+    <p class="hint">این نسخهٔ نمایشی است؛ ورود و ثبت‌نام هنوز به سرویس احراز هویت متصل نشده‌اند.</p>
+  </section></div>
+
+  <div class="overlay" id="cartOverlay" onclick="backdropClose(event,'cartOverlay')"><section class="modal" role="dialog" aria-modal="true" aria-labelledby="cartTitle"><button class="close" onclick="closeModal('cartOverlay')" aria-label="بستن">×</button><h2 id="cartTitle">سبد خرید تو</h2><p class="sub">محصولات انتخاب‌شده را بررسی کن.</p><div id="cartItems"></div><div class="cart-total"><span>جمع سبد</span><span id="cartTotal">۰ تومان</span></div><button class="action" onclick="checkout()">ادامه و ثبت سفارش</button><p class="hint">برای نهایی‌کردن سفارش، ورود یا ثبت‌نام لازم است.</p></section></div>
+
+  <div class="overlay" id="managerOverlay" onclick="backdropClose(event,'managerOverlay')"><section class="modal" role="dialog" aria-modal="true" aria-labelledby="managerTitle"><button class="close" onclick="closeModal('managerOverlay')" aria-label="بستن">×</button><h2 id="managerTitle">ورود مدیر فروشگاه</h2><p class="sub">این بخش مخصوص مدیر فروشگاه است.</p><form onsubmit="submitManager(event)"><input class="field" type="text" placeholder="نام کاربری مدیر" required><input class="field" type="password" placeholder="رمز عبور مدیر" required><button class="action" type="submit">ورود مدیر</button></form><p class="hint">پنل مدیر و بررسی امن اطلاعات ورود هنوز به بک‌اند متصل نشده‌اند.</p></section></div>
+
   <script>
-    let cart=0;function addCart(name){cart++;document.getElementById('count').textContent=cart;toast(name+' به سبد خرید اضافه شد');}
-    function showCart(){toast(cart?'تعداد کالاهای سبد خرید: '+cart:'سبد خریدت هنوز خالی است');}
-    function toast(text){const el=document.getElementById('toast');el.textContent=text;el.style.display='block';clearTimeout(window.toastTimer);window.toastTimer=setTimeout(()=>el.style.display='none',2600);}
+    const cart = new Map();
+    let authMode = 'login';
+    let customerLoggedIn = false;
+    const faNumber = value => new Intl.NumberFormat('fa-IR').format(value);
+    function showToast(message){const el=document.getElementById('toast');el.textContent=message;el.style.display='block';clearTimeout(window.toastTimer);window.toastTimer=setTimeout(()=>el.style.display='none',2600);}
+    function openAuth(mode='login'){setAuthMode(mode);document.getElementById('authOverlay').classList.add('open');}
+    function closeModal(id){document.getElementById(id).classList.remove('open');}
+    function backdropClose(event,id){if(event.target.id===id)closeModal(id);}
+    function setAuthMode(mode){authMode=mode;const signup=mode==='signup';document.getElementById('authTitle').textContent=signup?'ساخت حساب کاربری':'ورود به Pink Maryam';document.getElementById('nameField').hidden=!signup;document.getElementById('customerName').required=signup;document.getElementById('customerPassword').autocomplete=signup?'new-password':'current-password';document.getElementById('authSubmit').textContent=signup?'ثبت‌نام':'ورود';document.getElementById('loginTab').classList.toggle('active',!signup);document.getElementById('signupTab').classList.toggle('active',signup);}
+    function submitAuth(event){event.preventDefault();customerLoggedIn=true;const name=document.getElementById('customerName').value.trim();closeModal('authOverlay');showToast(authMode==='signup'?'حساب نمایشی ساخته شد'+(name?'، '+name:''):'ورود نمایشی انجام شد');if(window.checkoutAfterAuth){window.checkoutAfterAuth=false;finishCheckout();}}
+    function openManager(){document.getElementById('managerOverlay').classList.add('open');}
+    function submitManager(event){event.preventDefault();showToast('ورود مدیر در نسخهٔ نمایشی است؛ پنل واقعی هنوز متصل نیست.');}
+    function addCart(button){const p=button.closest('.product');const name=p.dataset.name;const price=Number(p.dataset.price);const current=cart.get(name)||{name,price,qty:0};current.qty++;cart.set(name,current);renderCart();showToast(name+' به سبد خرید اضافه شد');}
+    function changeQty(name,delta){const item=cart.get(name);if(!item)return;item.qty+=delta;if(item.qty<=0)cart.delete(name);renderCart();}
+    function renderCart(){let count=0,total=0;const host=document.getElementById('cartItems');host.innerHTML='';cart.forEach(item=>{count+=item.qty;total+=item.price*item.qty;const row=document.createElement('div');row.className='cart-row';const label=document.createElement('span');label.textContent=item.name+' · '+faNumber(item.price)+' تومان';const qty=document.createElement('div');qty.className='qty';const minus=document.createElement('button');minus.textContent='−';minus.setAttribute('aria-label','کم کردن تعداد');minus.onclick=()=>changeQty(item.name,-1);const number=document.createElement('span');number.textContent=faNumber(item.qty);const plus=document.createElement('button');plus.textContent='+';plus.setAttribute('aria-label','زیاد کردن تعداد');plus.onclick=()=>changeQty(item.name,1);qty.append(minus,number,plus);row.append(label,qty);host.append(row);});if(!count)host.innerHTML='<div class="empty">سبد خریدت هنوز خالی است 🛍</div>';document.getElementById('count').textContent=faNumber(count);document.getElementById('cartTotal').textContent=faNumber(total)+' تومان';}
+    function openCart(){renderCart();document.getElementById('cartOverlay').classList.add('open');}
+    function checkout(){if(!cart.size){showToast('اول محصولی به سبد خرید اضافه کن');return;}closeModal('cartOverlay');if(!customerLoggedIn){window.checkoutAfterAuth=true;openAuth('login');return;}finishCheckout();}
+    function finishCheckout(){openCart();showToast('ورود تأیید شد؛ ثبت سفارش در نسخهٔ نمایشی آماده است.');}
     function filterProducts(category){document.querySelectorAll('.filter').forEach(b=>b.classList.toggle('active',b.dataset.filter===category));document.querySelectorAll('.product').forEach(p=>p.style.display=(category==='همه'||p.dataset.category===category)?'':'none');}
     document.querySelectorAll('.filter').forEach(b=>b.addEventListener('click',()=>filterProducts(b.dataset.filter)));
     document.querySelectorAll('.cat').forEach(b=>b.addEventListener('click',()=>filterProducts(b.dataset.filter)));
     document.getElementById('search').addEventListener('input',e=>{const q=e.target.value.trim();document.querySelectorAll('.product').forEach(p=>p.style.display=p.dataset.name.includes(q)?'':'none');});
+    document.addEventListener('keydown',e=>{if(e.key==='Escape')document.querySelectorAll('.overlay.open').forEach(el=>el.classList.remove('open'));});
+    renderCart();
   </script>
 </body>
 </html>
