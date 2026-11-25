@@ -52,9 +52,32 @@ jobs:
 
       - name: Install dependencies
         run: npm install
+        # sharp is used only in CI to rasterize the SVG app icon.
+      - name: Install icon renderer
+        run: npm install --no-save sharp
 
       - name: Generate Android project
         run: npx cap add android
+
+      - name: Apply Pink Maryam app icon
+        run: |
+          node <<'NODE'
+          const sharp = require('sharp');
+          const fs = require('fs');
+          const path = require('path');
+          const svg = fs.readFileSync('assets/pink-maryam-icon.svg');
+          const root = 'android/app/src/main/res';
+          const densities = { mdpi: 48, hdpi: 72, xhdpi: 96, xxhdpi: 144, xxxhdpi: 192 };
+          (async () => {
+            for (const [density, size] of Object.entries(densities)) {
+              const dir = path.join(root, 'mipmap-' + density);
+              fs.mkdirSync(dir, { recursive: true });
+              for (const name of ['ic_launcher.png', 'ic_launcher_round.png', 'ic_launcher_foreground.png']) {
+                await sharp(svg).resize(size, size).png().toFile(path.join(dir, name));
+              }
+            }
+          })().catch(error => { console.error(error); process.exit(1); });
+          NODE
 
       - name: Sync web app
         run: npx cap sync android
@@ -68,6 +91,6 @@ jobs:
       - name: Upload APK
         uses: actions/upload-artifact@v4
         with:
-          name: pink-boutique-debug-apk
+          name: pink-maryam-debug-apk
           path: android/app/build/outputs/apk/debug/app-debug.apk
           if-no-files-found: error
